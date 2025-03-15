@@ -1,0 +1,16 @@
+name: My First Workflow
+
+on: push
+
+jobs:
+    firs_job:
+        runs-on: ubuntu-22.04
+        steps:
+            - name: Welcome step
+              run: echo "Welcome step"
+            
+            - name: List Step
+              run: ls 
+
+            - name: Read Step
+              run: cat README.md
