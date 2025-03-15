@@ -6,6 +6,9 @@ jobs:
     firs_job:
         runs-on: ubuntu-22.04
         steps:
+            - name: checkout
+              uses: actions/checkout@v4
+              
             - name: Welcome step
               run: echo "Welcome step"
             
