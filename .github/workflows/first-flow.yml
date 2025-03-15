@@ -8,12 +8,12 @@ jobs:
         steps:
             - name: checkout
               uses: actions/checkout@v4
-              
-            - name: Welcome step
-              run: echo "Welcome step"
-            
-            - name: List Step
-              run: ls 
 
-            - name: Read Step
-              run: cat README.md
+            - name: Read Files
+              run: |
+                echo "Welcome step"
+                ls -la
+                cat README.md
+            
+            - name: Generate ASCII Artworks
+              run: cowsay -f dragon "Run for cover. I am a DRAGON ... RAWR" >> dragon.txt
