@@ -9,18 +9,13 @@ jobs:
         steps:
             - name: Clone the repo
               uses:  actions/checkout@v4
-
-            - name: install cowsay
-              run:  sudo apt install cowsay -y
-
-            - name: Generate ASCII Artwork
-              run: cowsay -f dragon "Run for cover. I am a DRAGON ... RAWR" >> dragon.txt
-
-            - name: Test Files Exists
-              run: grep -i "dragon" dragon.txt
-
-            - name: Read file
-              run: cat dragon.txt
-
+            
             - name: List files
               run: ls -ltra
+
+            - name: Execute Generate ASCII Artwork Script
+              run: |
+                chmod +x ascii-script.sh
+                ./ascii-script.sh
+
+            
